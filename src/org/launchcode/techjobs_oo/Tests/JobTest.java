@@ -30,7 +30,6 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetAllFields() {
-
         assertTrue(test_jobOne instanceof Job);
         assertEquals(1,test_jobOne.getId());
         assertEquals("Product tester", test_jobOne.getName());
@@ -39,6 +38,7 @@ public class JobTest {
         assertEquals("Quality control", test_jobOne.getPositionType().getValue());
         assertEquals("Persistence", test_jobOne.getCoreCompetency().getValue());
     }
+
     @Test
     public void testJobsForEquality() {
 
