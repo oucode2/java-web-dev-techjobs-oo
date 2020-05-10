@@ -13,12 +13,13 @@ import org.launchcode.techjobs_oo.Job;
 public class JobTest {
     Job test_jobOne;
     Job test_jobTwo;
+    Job test_jobThree;
 
     @Before
     public void createCarObject() {
         test_jobOne = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         test_jobTwo = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
-        test_jobThree = new Job("Product teste", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test_jobOne = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     @Test
@@ -37,9 +38,10 @@ public class JobTest {
         assertEquals("Quality control", test_jobOne.getPositionType().getValue());
         assertEquals("Persistence", test_jobOne.getCoreCompetency().getValue());
     }
-
+    @Test
     public void testJobsForEquality() {
-        assertFalse(test_jobOne, test_jobThree);
-        assertTrue(test_jobTwo.getId() == test_jobOne.getId() + 1);
+
+        assertFalse(test_jobOne == test_jobThree);
+
     }
 }
