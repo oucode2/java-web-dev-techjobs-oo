@@ -21,8 +21,7 @@ public class JobTest {
     }
     @Test
     public void testSettingJobId() {
-        System.out.println(test_jobOne.getId());
-        System.out.println(test_jobTwo.getId());
         assertFalse(test_jobOne.getId() == test_jobTwo.getId());
+        assertTrue(test_jobTwo.getId()== test_jobOne.getId()+1);
     }
 }
