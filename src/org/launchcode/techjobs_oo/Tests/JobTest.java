@@ -19,7 +19,7 @@ public class JobTest {
     public void createCarObject() {
         test_jobOne = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         test_jobTwo = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
-        test_jobOne = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test_jobThree = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     @Test
@@ -31,7 +31,7 @@ public class JobTest {
     @Test
     public void testJobConstructorSetAllFields() {
         assertTrue(test_jobOne instanceof Job);
-        assertEquals(1, test_jobOne.getId(), .001);
+        assertEquals(1, test_jobOne.getId());
         assertEquals("Product tester", test_jobOne.getName());
         assertEquals("ACME", test_jobOne.getEmployer().getValue());
         assertEquals("Desert", test_jobOne.getLocation().getValue());
