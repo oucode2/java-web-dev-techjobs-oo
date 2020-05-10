@@ -22,6 +22,16 @@ public class JobTest {
     @Test
     public void testSettingJobId() {
         assertFalse(test_jobOne.getId() == test_jobTwo.getId());
-        assertTrue(test_jobTwo.getId()== test_jobOne.getId()+1);
+        assertTrue(test_jobTwo.getId() == test_jobOne.getId()+1);
+    }
+    @Test
+    public void testJobConstructorSetAllFields() {
+        assertTrue(test_jobOne instanceof Job);
+        assertEquals(1, test_jobOne.getId(),.001);
+        assertEquals("Product tester", test_jobOne.getEmployer());
+        //assertEquals("ACME", test_jobOne.getEmployer());
+        //assertEquals("Desert", test_jobOne.getLocation());
+        //assertEquals("Quality control", test_jobOne.getPositionType());
+        //assertEquals("Persistence", test_jobOne.getCoreCompetency());
     }
 }
