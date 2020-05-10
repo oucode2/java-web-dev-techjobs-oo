@@ -30,8 +30,9 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetAllFields() {
+
         assertTrue(test_jobOne instanceof Job);
-        assertEquals(1, test_jobOne.getId());
+        assertEquals(1,test_jobOne.getId());
         assertEquals("Product tester", test_jobOne.getName());
         assertEquals("ACME", test_jobOne.getEmployer().getValue());
         assertEquals("Desert", test_jobOne.getLocation().getValue());
