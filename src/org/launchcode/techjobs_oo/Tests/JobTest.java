@@ -21,6 +21,8 @@ public class JobTest {
     }
     @Test
     public void testSettingJobId() {
-        assertEquals(10, 10, .001);
+        System.out.println(test_jobOne.getId());
+        System.out.println(test_jobTwo.getId());
+        assertFalse(test_jobOne.getId() == test_jobTwo.getId());
     }
 }
