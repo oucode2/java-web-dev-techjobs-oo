@@ -23,7 +23,7 @@ public class JobTest {
     }
 
     @Test
-    public void testSettingJobId() {
+   public void testSettingJobId() {
         assertFalse(test_jobOne.getId() == test_jobTwo.getId());
         assertTrue(test_jobTwo.getId() == test_jobOne.getId() + 1);
     }
@@ -31,7 +31,6 @@ public class JobTest {
     @Test
     public void testJobConstructorSetAllFields() {
         assertTrue(test_jobOne instanceof Job);
-        assertEquals(1,test_jobOne.getId());
         assertEquals("Product tester", test_jobOne.getName());
         assertEquals("ACME", test_jobOne.getEmployer().getValue());
         assertEquals("Desert", test_jobOne.getLocation().getValue());
