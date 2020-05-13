@@ -44,4 +44,10 @@ public class JobTest {
         assertFalse(test_jobOne == test_jobThree);
 
     }
+
+    @Test
+    public void testToStringForBlankLines()  {
+        assertTrue(test_jobOne.toString().startsWith("\r\n"));
+        assertTrue(test_jobOne.toString().endsWith("\r\n"));
+    }
 }
