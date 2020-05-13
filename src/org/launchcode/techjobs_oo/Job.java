@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class Job {
 
-    private int id;
+    private static int id;
     private static int nextId = 1;
 
-    private String name;
-    private Employer employer;
-    private Location location;
-    private PositionType positionType;
-    private CoreCompetency coreCompetency;
+    private static String name;
+    private static Employer employer;
+    private static Location location;
+    private static PositionType positionType;
+    private static CoreCompetency coreCompetency;
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
@@ -98,6 +98,19 @@ public class Job {
     }
 
     public String toString() {
-        return ("\r\n" + "\r\n");
+        if (Job.employer.getValue() == "") {
+            Job.employer.setValue("Data not available");
+        }
+        else if (Job.location.getValue() == "") {
+            Job.location.setValue("Data not available");
+        }
+        else if (Job.positionType.getValue() == "") {
+            Job.positionType.setValue("Data not available");
+        }
+        else if (Job.coreCompetency.getValue() == "") {
+            Job.coreCompetency.setValue("Data not available");
+        }
+
+        return ("\r\n" + "ID: " + Job.id + "\r\n" + "Name: " + Job.name + "\r\n" + "Employer: " + Job.employer + "\r\n" + "Location: " + Job.location + "\r\n" + "Position Type: " + Job.positionType + "\r\n" + "Core Competency: " + Job.coreCompetency + "\r\n");
     }
 }

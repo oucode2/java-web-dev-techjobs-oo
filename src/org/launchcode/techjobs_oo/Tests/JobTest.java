@@ -50,4 +50,34 @@ public class JobTest {
         assertTrue(test_jobOne.toString().startsWith("\r\n"));
         assertTrue(test_jobOne.toString().endsWith("\r\n"));
     }
+
+    @Test
+    public void testToStringForIdLine()  {
+        assertTrue(test_jobOne.toString().contains("ID: " + test_jobOne.getId()));
+    }
+
+    @Test
+    public void testToStringForName()  {
+        assertTrue(test_jobOne.toString().contains("Name: " + test_jobOne.getName()));
+    }
+
+    @Test
+    public void testToStringForEmployer()  {
+        assertTrue(test_jobOne.toString().contains("Employer: " + test_jobOne.getEmployer()));
+    }
+
+    @Test
+    public void testToStringForLocation()  {
+        assertTrue(test_jobOne.toString().contains("Location: " + test_jobOne.getLocation()));
+    }
+
+    @Test
+    public void testToStringForPositionType()  {
+        assertTrue(test_jobOne.toString().contains("Position Type: " + test_jobOne.getPositionType()));
+    }
+
+    @Test
+    public void testToStringForCoreCompetency()  {
+        assertTrue(test_jobOne.toString().contains("Core Competency: " + test_jobOne.getCoreCompetency()));
+    }
 }
