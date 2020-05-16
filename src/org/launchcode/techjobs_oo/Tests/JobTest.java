@@ -2,7 +2,6 @@ package org.launchcode.techjobs_oo.Tests;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
-import org.launchcode.techjobs_oo.Main;
 import org.launchcode.techjobs_oo.CoreCompetency;
 import org.launchcode.techjobs_oo.PositionType;
 import org.launchcode.techjobs_oo.Location;

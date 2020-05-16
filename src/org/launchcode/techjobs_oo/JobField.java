@@ -1,13 +1,14 @@
 package org.launchcode.techjobs_oo;
 
+import java.util.Objects;
+
 public abstract class JobField {
     private int id;
     private static int nextId = 1;
     private String value;
 
-    public JobField (int aId, int aNextId, String aValue) {
-        id = aId;
-        nextId = aNextId;
+    public JobField (String aValue) {
+
         value = aValue;
     }
 
@@ -16,6 +17,10 @@ public abstract class JobField {
         return value;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
 
     public int getId() {
         return id;
